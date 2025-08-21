@@ -1,7 +1,7 @@
 import css from "./Header.module.css";
 import Link from "next/link";
 
-function Footer() {
+function Header() {
   return (
     <header className={css.header}>
       <Link href="/" aria-label="Home">
@@ -20,4 +20,4 @@ function Footer() {
     </header>
   );
 }
-export default Footer;
+export default Header;
