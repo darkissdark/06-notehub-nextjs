@@ -6,13 +6,13 @@ import { useDebounce } from "use-debounce";
 import { fetchNotes, type FetchNotesResponse } from "../../lib/api";
 import css from "./NotesPage.module.css";
 
-import NoteList from "../components/NoteList/NoteList";
-import SearchBox from "../components/SearchBox/SearchBox";
-import Pagination from "../components/Pagination/Pagination";
-import Modal from "../components/Modal/Modal";
-import NoteForm from "../components/NoteForm/NoteForm";
-import Loader from "../components/Loader/Loader";
-import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
+import NoteList from "@/components/NoteList/NoteList";
+import SearchBox from "@/components/SearchBox/SearchBox";
+import Pagination from "@/components/Pagination/Pagination";
+import Modal from "@/components/Modal/Modal";
+import NoteForm from "@/components/NoteForm/NoteForm";
+import Loader from "@/components/Loader/Loader";
+import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
 
 const Notes = () => {
   const [search, setSearch] = useState("");
