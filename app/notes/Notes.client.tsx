@@ -33,11 +33,18 @@ const Notes = () => {
       });
       return response;
     },
+    refetchOnMount: false,
     placeholderData: (previousData) => previousData,
   });
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.documentElement.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.documentElement.removeAttribute("style");
+  };
 
   const handleSearch = (value: string) => {
     setSearch(value);
