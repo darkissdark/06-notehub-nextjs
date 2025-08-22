@@ -39,11 +39,9 @@ const Notes = () => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.documentElement.style.overflow = "hidden";
   };
   const closeModal = () => {
     setIsModalOpen(false);
-    document.documentElement.removeAttribute("style");
   };
 
   const handleSearch = (value: string) => {

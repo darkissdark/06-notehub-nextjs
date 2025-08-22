@@ -20,7 +20,11 @@ function Modal({ children, onClose }: ModalProps) {
 
   useEffect(() => {
     window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
+    document.documentElement.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+      document.documentElement.removeAttribute("style");
+    };
   }, [handleEsc]);
 
   return createPortal(
