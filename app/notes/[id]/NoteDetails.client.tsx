@@ -16,6 +16,7 @@ export default function NoteDetailsClient() {
       if (!id) throw new Error("No note ID provided");
       return fetchNoteById(id);
     },
+    refetchOnMount: false,
   });
 
   if (isLoading) {
